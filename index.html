@@ -4,6 +4,9 @@ title: Bucket of pennies
 ---
 <ul class="posts">
   {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+    <li>
+      <div><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></div>
+      <div>{{ post.date | date_to_string }}</div>
+    </li>
   {% endfor %}
 </ul>
